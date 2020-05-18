@@ -1,1 +1,10 @@
 /* pages/test/test.wxss */
+.pic-1{
+  /* 不能是本地资源,我去,一定要网络资源 */
+  background-image:url("https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg");
+  height:100%;
+}
+.pic-2{
+  background-color: pink;
+  height: 100%;
+}

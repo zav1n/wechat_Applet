@@ -1,4 +1,96 @@
 <!--pages/test/test.wxml-->
- <text selectable="{{true}}" decode="{{true}}">
-    是否&nbsp;解码
+<!-- 
+   text标签
+1. 文本标签
+2. 只能嵌套text
+3. 长按文字可以复制（只有该标签有这个功能）
+4. 可以对空格 回车 进行编码
+
+| 属性名     | 类型    | 默认值 | 说明          |
+| ---------- | ------- | ------ | ------------|
+| selectable | Boolean | false  | 文本是否可选 |
+| decode     | Boolean | false  | 是否解码     |
+
+ -->
+   <text selectable="{{false}}" decode="{{false}}">
+    文本是否可选&nbsp;&nbsp;是否解码
   </text>
+<!-- 
+  image标签
+1. 图片标签，image组件默认宽度320px、高度240px
+2. 支持懒加载
+
+| 属性名    | 类型    | 默认值        | 说明                 |
+| --------- | ------- | ------------- | -------------------- |
+| src       | String  |               | 图片资源地址         |
+| mode      | String  | 'scaleToFill' | 图片裁剪、缩放的模式 |
+| lazy-load | Boolean | false         | 图片懒加载           |
+ -->
+<view class="page">
+  <view class="page__bd">
+    <view class="section section_gap" wx:for="{{array}}" wx:for-item="item">
+      <view class="section__title">{{item.text}}</view>
+      <view class="section__ctn">
+        <image style="width: 200px; height: 200px;" mode="{{item.mode}}" src="{{src}}"></image>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 
+  Swipe标签(轮播图)
+  默认宽度 100% 高度 150px
+| 属性名                 | 类型    | 默认值            | 说明                 |
+| ---------------------- | ------- | ----------------- | -------------------- |
+| indicator-dots         | Boolean | false             | 是否显示面板指示点   |
+| indicator-color        | Color   | rgba(0, 0, 0, .3) | 指示点颜色           |
+| indicator-active-color | Color   | #000000           | 当前选中的指示点颜色 |
+| autoplay               | Boolean | false             | 是否自动切换         |
+| interval               | Number  | 5000              | 自动切换时间间隔     |
+| circular               | Boolean | false             | s是否循环轮播        |
+ -->
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicatorColor="{{indicatorColor}}" indicatorActiveColor="{{indicatorActiveColor}}" vertical="{{vertical}}">
+  <block wx:for="{{background}}" wx:key="*this">
+    <swiper-item>
+      <view class="swiper-item {{item}}"></view>
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- 
+  navigator标签
+  | 属性名    | 类型   | 默认值   | 说明  |
+| --------- | ------ | -------- | ----- |
+| target    | String | self     | 在哪个目标上发生跳转
+                                  默认当前小程序，可选值self/                miniProgram |
+| url       | String |          | 当前小程序内的跳转链接 |
+| open-type | String | navigate | 跳转方式    |
+ -->
+ <navigator url='/page/index/index' open-type="navigate">点击跳转</navigator>
+
+<!-- 
+  rich-text标签
+ -->
+ <rich-text nodes="{{nodes}}" bindtap="tap"></rich-text>
+<!--  2 加载 字符串 -->
+<rich-text nodes='<img src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg" alt="">'></rich-text> 
+
+<!-- 
+  iCon
+ -->
+
+ <view class="group">
+  <block wx:for="{{iconSize}}">
+    <icon type="success" size="{{item}}"/>
+  </block>
+</view>
+<view class="group">
+  <block wx:for="{{iconType}}">
+    <icon type="{{item}}" size="40"/>
+  </block>
+</view>
+<view class="group">
+  <block wx:for="{{iconColor}}">
+    <icon type="success" size="40" color="{{item}}"/>
+  </block>
+</view>
