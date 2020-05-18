@@ -4,11 +4,19 @@ const app = getApp()
 
 Page({
   data: {
-    name:"刘德华",
-    foreign:"Andy Lau,Lau Tak Wah",
-    otherName:"华仔，华Dee，华哥等",
-    country:"中国",
-    minority:"汉族",
+    liudehua:[
+    {name:"刘德华"},
+    {foreign_name:"Andy Lau,Lau Tak Wah"},
+    {other_name:"华仔，华Dee，华哥等"},
+    {country:"中国"},
+    {citizen:"汉族"},
+    {xingzuo:"天秤座"},
+    {blood:"AB型"},
+    {tall:"174cm"},
+    {weight:"63kg"},
+    {born:"香港新界大浦镇泰亨村"},
+    {birthday:"1961年9月27日"}
+    ],
     condition:true,
     a:1,
     b:2,

@@ -1,0 +1,4 @@
+<!--pages/test/test.wxml-->
+ <text selectable="{{true}}" decode="{{true}}">
+    是否&nbsp;解码
+  </text>

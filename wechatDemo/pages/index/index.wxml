@@ -8,11 +8,21 @@
   <view class="nav-item">市场</view>
   <view class="nav-item">探索</view>
 </view>
-<view>
-  <text>中文名：</text><text>{{name}}</text>
+<view wx:for="{{liudehua}}">
+  <text>{{item.name}}</text>
+  <text>{{item.foreign_name}}</text>
+  <text>{{item.other_name}}</text>
+  <text>{{item.country}}</text>
+  <text>{{item.citizen}}</text>
+  <text>{{item.xingzuo}}</text>
+  <text>{{item.blood}}</text>
+  <text>{{item.tall}}</text>
+  <text>{{item.weight}}</text>
+  <text>{{item.born}}</text>
+  <text>{{item.birthday}}</text>
 </view>
 <!-- 插值表达式 -->
-<checkbox checked="true">可以勾选</checkbox>
+<checkbox checked="true">可以勾选 </checkbox>
 <checkbox checked="false">就算checked是ifalse也可以勾选</checkbox>
 <checkbox checked="{{condition}}">插值表达式定义true和false</checkbox>
 <!-- 插值表达式可以计算（三目运算） -->

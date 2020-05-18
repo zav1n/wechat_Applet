@@ -1,11 +1,12 @@
 {
   "pages":[
+    "pages/test/test",
+    "pages/index/index",
     "pages/demo051802/demo051802",
     "pages/demo051804/demo051804",
     "pages/demo051803/demo051803",
     "pages/demo1/demo1",
     "pages/demo/demo",
-    "pages/index/index",
     "pages/logs/logs"
   ],
   "window":{
