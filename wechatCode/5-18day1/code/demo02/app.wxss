@@ -1,0 +1,6 @@
+/* 引入样式 */
+@import "styles/common.wxss"
+/* * 　通配符不可用 */
+/* * {
+
+} */

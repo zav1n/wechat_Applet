@@ -1,0 +1,6 @@
+<!--pages/demo051804/demo051804.wxml-->
+<text>小程序的例子</text>
+<button bindtap="handleClick">切换图片</button>
+<!-- <image src="/images/b1.jpg"></image> -->
+<image src="{{image_url}}"></image>
+<button bindtap="arg" data-num="100" data-number="200" data-id="1">{{msg}}</button>

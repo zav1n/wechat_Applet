@@ -1,0 +1,47 @@
+{
+  "pages":[
+    "pages/demo051802/demo051802",
+    "pages/demo051804/demo051804",
+    "pages/demo051803/demo051803",
+    "pages/demo1/demo1",
+    "pages/demo/demo",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "zaven的微信小程序",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/home.png",
+      "selectedIconPath": "images/home-o.png"
+    },{
+      "pagePath": "pages/index/index",
+      "text": "编辑",
+      "iconPath": "images/edit.png",
+      "selectedIconPath": "images/edit-o.png"
+    },{
+      "pagePath": "pages/index/index",
+      "text": "购物车",
+      "iconPath": "images/cart.png",
+      "selectedIconPath": "images/cart-o.png"
+    },{
+      "pagePath": "pages/index/index",
+      "text": "导航",
+      "iconPath": "images/navigator.png",
+      "selectedIconPath": "images/navigator-o.png"
+    },{
+      "pagePath": "pages/index/index",
+      "text": "个人",
+      "iconPath": "images/person.png",
+      "selectedIconPath": "images/person-o.png"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

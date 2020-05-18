@@ -1,0 +1,8 @@
+<!--pages/demo051803/demo051803.wxml-->
+<text>wx:if 与 hidden 之间的区别</text>
+<!--  -->
+<image src="/images/b1.jpg" wx:if="{{show}}" class="pic1"></image>
+<image src="/images/b1.jpg" hidden="{{show}}" class="pic2"></image>
+<!--  -->
+<image src="/images/b3.jpg" wx:if="{{condition}}" class="pic3"></image>
+<image src="/images/b3.jpg" hidden="{{condition}}" class="pic4"></image>

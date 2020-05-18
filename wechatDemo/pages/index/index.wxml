@@ -1,0 +1,23 @@
+<!-- 
+  view => div
+  text => span
+ -->
+<view class="nav">
+  <view class="nav-item">拉去要求</view>
+  <view class="nav-item">问题</view>
+  <view class="nav-item">市场</view>
+  <view class="nav-item">探索</view>
+</view>
+<view>
+  <text>中文名：</text><text>{{name}}</text>
+</view>
+<!-- 插值表达式 -->
+<checkbox checked="true">可以勾选</checkbox>
+<checkbox checked="false">就算checked是ifalse也可以勾选</checkbox>
+<checkbox checked="{{condition}}">插值表达式定义true和false</checkbox>
+<!-- 插值表达式可以计算（三目运算） -->
+<view>{{condition?"真":"假"}}</view>
+<view>a+b={{a+b}}</view>
+<!-- 逻辑运算 -->
+<view wx:if="{{length > 5}}">这里会显示，因为插值表达式的判断</view>
+<view wx:if="{{length < 5}}">这里不会显示，因为插值表达式的判断</view>

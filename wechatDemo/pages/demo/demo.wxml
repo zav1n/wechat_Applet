@@ -1,0 +1,15 @@
+
+<text>实现一个导航条</text>
+<view class="nav">
+    <view wx:for="{{navs}}" class="nav-item">
+      {{index}}:{{item}}
+      <!-- index不写会报黄警 -->
+    </view>
+</view>
+
+<view class="nav">
+    <view wx:for="{{navsObject}}" wx:key="{{id}}" class="nav-item">
+      {{item.id}}:{{item.text}}
+      <!-- index不写会报黄警 -->
+    </view>
+</view>
