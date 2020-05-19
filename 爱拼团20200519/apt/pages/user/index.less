@@ -1,0 +1,94 @@
+.apt-my {
+
+    background:#f9f9f9;
+    .apt-my-profile {
+        height: 400rpx;
+        position: relative;
+        background-color: white;
+        button{
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            color: red;
+            transform:translateX(-50%);
+            border: 1px solid red;
+        }
+        .user-info-bg {
+            image {
+                height: 400rpx;
+                width: 100%;
+                filter: blur(28rpx);
+            }
+          }
+    
+          .image_wrapper {
+            position: absolute;
+            top:20%;
+            left:50%;
+            transform: translateX(-50%);
+            image {
+                border-radius: 50%;
+                height: 172rpx;
+                width: 172rpx;  
+            }
+          }
+    
+          .nickName {
+            position: absolute;
+            top:70%;
+            left:50%;
+            transform: translateX(-50%);
+            color:white;
+          }
+    }
+    .apt-my-orderFunc {
+        height: 150rpx;
+        display: flex;
+        align-items: center;
+        margin: 10rpx 0 ;
+        background-color: #fff;
+        .orderFunc-item {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .iconfont {
+            font-size: 50rpx;
+          }
+          .text {
+            font-size: 30rpx;
+          }
+        }
+      }
+      .apt-my-systemFunc {
+        background-color: white;
+        height: 100%;
+        .systemFunc-item {
+            padding:20rpx;
+            height: 100rpx;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1rpx solid #ccc;
+            .left {
+                display: flex;
+                align-items: center;
+                .iconfont{
+                color:#434343;
+                font-size:50rpx;
+            }
+      
+            .text {
+                margin-left:30rpx;
+                color:#434343;
+                font-size:30rpx;
+            }
+          }
+      
+          .right {
+            color:#ccc;
+            font-size:30rpx;
+          }
+        }
+      }
+  }

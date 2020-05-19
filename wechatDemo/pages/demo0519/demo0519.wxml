@@ -57,6 +57,19 @@
   </block>
 </swiper>
 
+<swiper indicator-dots="true"
+        circular="true"
+        interval="3000"
+        autoplay="true"
+  >
+  <swiper-item>
+  <image mode="acpectFit" src="/images/b1.jpg" ></image>
+  </swiper-item>
+  <swiper-item>
+  <image mode="acpectFit" src="/images/b3.jpg" ></image>
+  </swiper-item>
+</swiper>
+
 <!-- 
   navigator标签
   | 属性名    | 类型   | 默认值   | 说明  |
@@ -66,7 +79,10 @@
 | url       | String |          | 当前小程序内的跳转链接 |
 | open-type | String | navigate | 跳转方式    |
  -->
- <navigator url='/page/index/index' open-type="navigate">点击跳转</navigator>
+ <navigator url='/pages/logs/logs' open-type="navigate">点击跳转</navigator>
+ <navigator url='/pages/logs/logs' open-type="redirect">redirect点击跳过去回不来，把前一个的页面关了</navigator>
+ <navigator url='/pages/logs/logs' open-type="relauch">relauch把所有子页面关闭，跳转到指定的页面</navigator>
+ <navigator url='/pages/index/index' open-type="switchTab">跳到有tabBar的页面</navigator>
 
 <!-- 
   rich-text标签
@@ -94,3 +110,32 @@
     <icon type="success" size="40" color="{{item}}"/>
   </block>
 </view>
+
+<!-- 
+  button标签
+ -->
+ <button type="primary" size="mini" open-type="getUserInfo" bindtap="" bindgetuserinfo="userInfo">获取用户信息</button>
+ <button type="warn" size="mini" open-type="openSetting">打开授权设置</button>
+ <button type="warn" size="mini" open-type="share">打开分享页面</button>
+ <button type="default" size="default" open-type="feedback">打开意见反馈</button>
+
+ <!-- 
+   radio标签
+  -->
+  <radio-group bindchange="radiochange">
+    <radio value="usa">美国</radio>
+    <radio value="cn">中国</radio>
+    <radio value="br">巴西</radio>
+    <radio value="jan">日本</radio>
+    <radio value="us">英国</radio>
+    <radio value="fr">法国</radio>
+  </radio-group>
+
+  <checkbox-group bindchange="checkChange">
+    <checkbox value="usa">美国</checkbox>
+    <checkbox value="cn">中国</checkbox>
+    <checkbox value="br">巴西</checkbox>
+    <checkbox value="jan">日本</checkbox>
+    <checkbox value="us">英国</checkbox>
+    <checkbox value="fr">法国</checkbox>
+  </checkbox-group>

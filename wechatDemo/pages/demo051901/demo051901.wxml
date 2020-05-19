@@ -1,0 +1,11 @@
+<view class="boss">
+  <view class="left">
+    <text>Web培训讲...</text>
+  </view>
+  <view class="right">
+      <text class="iconfont icon-21"></text>
+      <text class="iconfont icon-anjianfengexian"></text>
+      <text class="iconfont icon-sousuo"></text>
+    </view> 
+</view>
+

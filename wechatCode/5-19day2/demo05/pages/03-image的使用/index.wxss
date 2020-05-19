@@ -1,0 +1,15 @@
+/* pages/index/index.wxss */
+
+.box {
+  height: 300rpx;
+  width: 300rpx;
+}
+
+/* image {
+  height: 100rpx;
+  width: 100rpx;
+} */
+image {
+  height: 100%;
+  width: 100%;
+}

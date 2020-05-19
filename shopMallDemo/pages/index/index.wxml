@@ -1,0 +1,57 @@
+<search-input title="搜索"/>
+
+<view  class="index-swiper" >
+  <swiper indicator-dots="true" autoplay="true" >
+    <swiper-item>
+      <image src="http://www.linweiqin.cn/img/banner1.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="http://www.linweiqin.cn/img/banner2.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="http://www.linweiqin.cn/img/banner3.jpg"></image>
+    </swiper-item>
+  </swiper>
+</view>
+
+<view class="index-cartShop">
+  <view>
+    <image src="http://www.linweiqin.cn/img/cat1.png"></image>
+  </view>
+  <view>
+    <image src="http://www.linweiqin.cn/img/cat2.png"></image>
+  </view>
+  <view>
+    <image src="http://www.linweiqin.cn/img/cat3.png"></image>
+  </view>
+  <view>
+    <image src="http://www.linweiqin.cn/img/cat4.png"></image>
+  </view>
+  <view>
+    <image src="http://www.linweiqin.cn/img/cat5.png"></image>
+  </view>
+</view>
+
+<view class="index-goodsList">
+  <text class="index-goodstitle-1">时尚服装</text>
+  <view class="index-goods">
+    <view>
+      <image src="http://www.linweiqin.cn/img/floor1.jpg"></image>
+    </view>
+    <view>
+      <image src="http://www.linweiqin.cn/img/floor2.jpg"></image>
+    </view>
+    <view>
+      <image src="http://www.linweiqin.cn/img/floor3.jpg"></image>
+    </view>
+    <view>
+      <image src="http://www.linweiqin.cn/img/floor4.jpg"></image>
+    </view>
+    <view>
+      <image src="http://www.linweiqin.cn/img/floor5.jpg"></image>
+    </view>
+    <view>
+      <image src="http://www.linweiqin.cn/img/floor6.jpg"></image>
+    </view>
+  </view>
+</view>

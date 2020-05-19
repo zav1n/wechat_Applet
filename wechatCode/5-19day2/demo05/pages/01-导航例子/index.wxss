@@ -1,0 +1,19 @@
+.boss {
+  height: 100rpx;
+  background-color: #41c2ba;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+.boss .left text {
+  color: white;
+}
+.boss .right {
+  display: flex;
+}
+.boss .right .iconfont {
+  color: white;
+  font-size: 30rpx;
+}

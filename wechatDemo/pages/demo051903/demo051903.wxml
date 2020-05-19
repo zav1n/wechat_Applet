@@ -1,0 +1,32 @@
+<!-- 
+  父传子
+  title这个属性在search-input里面用，所以要去search-input的组件的属性(properties选项)去定义这个title
+  而search-input这个组件是子组件，demo051903这个是父
+  怎么定义title？-> 在子组件SearchInput组件的js文件，有properties选项，在这里定义title的属性
+  有哪些属性可以定义？-> 一般是数据类型，由type去定，value就是值，如果值不是type所定的数据类型就传不进去
+
+  子传父  
+  组件是子  引用组件的页面是父  所以SearchInput组件是子，demo051903是父  子传父中间还要用到这个triggerEvent
+  由子组件的wxml里面button按钮的参数想传到这里的demo051903
+  就要在子组件的js文件的methods方法里面去设置
+  怎么传？
+  1.SearchInput的button标签里面添加绑定事件（bindtap）
+  bindtap="searchBtnArg"
+  2.再去SearchInput的js文件的methods方法书写
+  methods: {
+    searchBtnArg(e){
+      //这里开始向父传值
+      //this.triggerEvent(e,t,n)    this.triggerEvent("事件名"，[值,arg,...],冒泡或捕获[bubbles，composed，capturePhase])
+      this.triggerEvent("searchBtnEvent","这个是子组件SearchInput的button的参数")
+    }
+  }
+  3.父（demo051903.wxml文件）需要调用子组件（SearchInput）定义的静态方法searchBtnArg
+  怎么调用？
+  在子组件的标签里面 -> bind：+ 函数名字 = “重新命名的函数名字”
+  父（demo051903.js文件）调用这个函数
+  重新命名的函数名字（e）{
+  console.log("接受到子组件的参数:",e.detail);
+  }
+ -->
+<search-input title="这是一个搜索框" bind:searchBtnEvent="sbe"></search-input>
+

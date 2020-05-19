@@ -1,0 +1,4 @@
+<view class="search-input">
+  <view class="search-input-content">{{title}}</view> 
+</view>
+<button bindtap="searchBtnArg">这里是SearchInput组件中的button文字</button>

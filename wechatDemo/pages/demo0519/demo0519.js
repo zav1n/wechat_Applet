@@ -80,7 +80,22 @@ Page({
   tap() {
     console.log('你点击了"点击控制台会输出文字"这段文字')
   },
-  
+  userInfo:function(e){
+    console.log(e)
+    console.log(e.detail)
+    console.log(e.detail.userInfo.nickName)
+  },
+  openSetting(e){
+    console.log(e)
+  },
+  //radioGroup
+  radiochange(e){
+    console.log(e)
+    console.log("你选中的值："+e.detail.value)
+  },
+  checkChange(e){
+    console.log(e.detail.value)
+  },
   /**
    * 生命周期函数--监听页面加载
    */

@@ -1,0 +1,3 @@
+<view class="search-input">
+  <view class="search-input-content">{{title}}</view> 
+</view>

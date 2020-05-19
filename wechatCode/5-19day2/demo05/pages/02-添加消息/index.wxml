@@ -1,0 +1,24 @@
+<!-- 
+  text 
+  selectable 是否可以被选中
+  decode 对特殊符号进行转义
+ -->
+<text>
+ 2011年1月，&nbsp;微信1.0发布
+ </text>
+<text decode="{{true}}">
+ 2011年1月，&nbsp;微信1.0发布
+ </text>
+<!-- 可选择 -->
+<text decode="{{true}}" selectable="{{true}}">
+ 2011年1月，&nbsp;微信1.0发布
+ </text>
+<!-- 
+ 使用 text 组件 实现文本的动态添加
+  -->
+
+<view>
+  <text decode="{{true}}">  {{text}}</text>
+
+</view>
+<button bindtap="addMessage">添加消息</button>

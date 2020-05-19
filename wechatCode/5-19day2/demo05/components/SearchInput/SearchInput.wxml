@@ -1,0 +1,9 @@
+<!-- 
+ 搜索框
+ -->
+<view class="search-input">
+  <view class="search-input-content">
+    {{title}}
+  </view>
+</view>
+<button bindtap="handleClick">传参数</button>

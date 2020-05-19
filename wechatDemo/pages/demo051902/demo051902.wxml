@@ -1,0 +1,6 @@
+<!--pages/demo051902/demo051902.wxml-->
+<view>
+<text>{{text}}</text>
+
+</view>
+<button bindtap="addMsg">添加文本</button>

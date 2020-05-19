@@ -1,0 +1,16 @@
+.boss {
+  height: 100rpx;
+  background-color: #41c2ba;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rpx;
+  box-sizing: border-box;
+  color: white;
+}
+.boss .left {
+  display: flex;
+}
+.boss .right {
+  display: flex;
+}

@@ -1,0 +1,11 @@
+<view>
+  <radio-group  bindchange="handleChange">
+    <radio value="usa" checked>美国</radio>
+    <radio value="cn" disabled	>中国</radio>
+    <radio value="br">巴西</radio>
+    <radio value="jp">日本</radio>
+    <radio value="uk">英国</radio>
+    <radio value="fr">法国</radio>
+  </radio-group>
+
+</view>
