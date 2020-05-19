@@ -4,3 +4,7 @@
 
 2.wechatCode老师的demoCode
 
+3.shopMallDemo商城小项目
+
+4.爱拼团20200519(商城小项目的源码)
+
