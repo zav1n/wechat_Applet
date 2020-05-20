@@ -1,16 +1,17 @@
 {
   "pages":[
-    "pages/user/user",
     "pages/index/index",
+    "pages/user/user",
     "pages/logs/logs"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#f63857",
     "navigationBarTitleText": "爱拼团商城",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle":"white"
   },
   "tabBar": {
+    "selectedColor":"#fa2358",
     "list": [{
       "pagePath": "pages/index/index",
       "text": "主页",

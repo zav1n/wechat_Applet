@@ -2,7 +2,10 @@
 
 <view  class="index-swiper" >
   <swiper indicator-dots="true" autoplay="true" >
-    <swiper-item>
+    <swiper-item  wx:for="{{index_swiper}}" wx:key="img_src">
+      <image src="{{item.img_src}}"></image>
+    </swiper-item>
+    <!-- <swiper-item>
       <image src="http://www.linweiqin.cn/img/banner1.jpg"></image>
     </swiper-item>
     <swiper-item>
@@ -10,14 +13,17 @@
     </swiper-item>
     <swiper-item>
       <image src="http://www.linweiqin.cn/img/banner3.jpg"></image>
-    </swiper-item>
+    </swiper-item> -->
   </swiper>
 </view>
 
 <view class="index-cartShop">
-  <view>
-    <image src="http://www.linweiqin.cn/img/cat1.png"></image>
+  <view wx:for="{{cartShop_icon}}" wx:key="*this" wx:for-item="cartShop_icon">
+    <image src="{{cartShop_icon.icon_img}}"></image>
   </view>
+  <!-- <view>
+    <image src="http://www.linweiqin.cn/img/cat1.png"></image>
+  </view> 
   <view>
     <image src="http://www.linweiqin.cn/img/cat2.png"></image>
   </view>
@@ -29,13 +35,16 @@
   </view>
   <view>
     <image src="http://www.linweiqin.cn/img/cat5.png"></image>
-  </view>
+  </view> -->
 </view>
 
 <view class="index-goodsList">
   <text class="index-goodstitle-1">时尚服装</text>
   <view class="index-goods">
-    <view>
+    <view wx:for="{{goods_list}}" wx:key="goods_img" wx:for-item="goods_list">
+      <image src="{{goods_list.goods_img}}"></image>
+    </view>
+    <!-- <view>
       <image src="http://www.linweiqin.cn/img/floor1.jpg"></image>
     </view>
     <view>
@@ -52,6 +61,6 @@
     </view>
     <view>
       <image src="http://www.linweiqin.cn/img/floor6.jpg"></image>
-    </view>
+    </view> -->
   </view>
 </view>

@@ -7,25 +7,49 @@ Page({
   data: {
     condition:false,
     btn_condition:true,
-    userhead:'',
+    userInfo:{},
+    userhead:"",
     username:"",
   },
   getUserInfo(e){
+    //把获取到的信息放到缓存  wx.setStorageSync('key', data)
+    //记得去生命周期的onshow时获取一下有没有用户信息
+    let userInfo = e.detail.userInfo;
+    wx.setStorageSync('userInfo', userInfo)
+
+    //1.获取用户信息
+    //获取到名字
+    let username = userInfo.nickName;
+    console.log(userInfo)
     //获取到头像
-    console.log(e.detail.userInfo.nickName);
-    console.log(e.detail.userInfo.avatarUrl);
-    let username = e.detail.userInfo.nickName;
-    let userhead = e.detail.userInfo.avatarUrl;
+    let userhead = e.detail.userInfo.userInfo;
     let condition,btn_condition;
-    if(e.detail.userInfo.avatarUrl){
+
+    //2.判断
+    if(userInfo){
+      console.log("进来判断了")
       condition=true;
       btn_condition=false;
     }
+
+    //4.把获取到的值设置一下
     this.setData({
       condition,
       btn_condition,
       userhead,
       username,
+      userInfo,
+    })
+  },
+  //退出登录
+  btnFbExit(){
+    console.log("点击退出了")
+    wx.removeStorage({
+      key: 'userInfo',
+    })
+    this.setData({
+      condition:false,
+      btn_condition:true,
     })
   },
   /**
@@ -47,6 +71,20 @@ Page({
    */
   onShow: function () {
 
+    let userInfo = wx.getStorageSync("userInfo");
+    let condition,btn_condition;
+    this.setData({
+      userInfo
+    })
+    if(userInfo){
+      console.log("进来判断了")
+      condition=true;
+      btn_condition=false;
+    }
+    this.setData({
+      condition,
+      btn_condition,
+    })
   },
 
   /**

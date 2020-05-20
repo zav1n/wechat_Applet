@@ -1,8 +1,11 @@
 <view class="user-login">
   <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" wx:if="{{btn_condition}}">登录</button>
-  <view class="userInfo">
-      <image src="{{userhead}}"></image>
-    <text>{{username}}</text>
+  <view class="login-bg" wx:if="{{condition}}">
+    <image src="{{userInfo.avatarUrl}}"></image>
+  </view>
+  <view class="userInfo" wx:if="{{condition}}">
+    <image src="{{userInfo.avatarUrl}}"></image>
+    <view class="userInfo-username">{{userInfo.nickName}}</view>
   </view>
 </view>
 
@@ -46,5 +49,13 @@
       <view class="text">当前版本</view>
     </view>
     <view class="right">v4.1.1</view>
+  </view>
+
+    <view class="fb-exit" bindtap="btnFbExit">
+    <view class="left">
+      <view class="iconfont icon-ziyuan"></view>
+      <view class="text">退出</view>
+    </view>
+    <view class="right"></view>
   </view>
 </view>
