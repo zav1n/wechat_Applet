@@ -29,13 +29,14 @@
 </view>
 
 <view class="user-fb">
-  <view class="fb-ctservice">
+  <view class="fb-ctservice"  bindtap="contactService">
     <view class="left">
       <view class="iconfont icon-lianxikefu"></view>
       <view class="text">联系客服</view>
-    </view>
-    <view class="right">400-618-4000</view>
   </view>
+  <view class="right">400-618-4000</view>
+</view>
+
   <view class="fb-givefb">
     <view class="left">
       <view class="iconfont icon-yijianfankui"></view>
@@ -43,6 +44,7 @@
     </view>
     <view class="right"></view>
   </view>
+
   <view class="fb-version">
     <view class="left">
       <view class="iconfont icon-ziyuan"></view>
@@ -51,11 +53,11 @@
     <view class="right">v4.1.1</view>
   </view>
 
-    <view class="fb-exit" bindtap="btnFbExit">
+  <view class="fb-exit" bindtap="btnFbExit">
     <view class="left">
       <view class="iconfont icon-ziyuan"></view>
       <view class="text">退出</view>
     </view>
-    <view class="right"></view>
   </view>
+    <view class="right"></view>
 </view>

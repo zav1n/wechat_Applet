@@ -20,7 +20,6 @@ Page({
     //1.获取用户信息
     //获取到名字
     let username = userInfo.nickName;
-    console.log(userInfo)
     //获取到头像
     let userhead = e.detail.userInfo.userInfo;
     let condition,btn_condition;
@@ -41,16 +40,62 @@ Page({
       userInfo,
     })
   },
+  //联系客服
+  contactService(){
+    wx.showModal({
+      title: '联系客服',
+      content: '请拨打电话：400-618-4000',
+      success: function (res) {
+        if (res.confirm) {//这里是点击了确定以后
+          console.log(res)
+        } else {//这里是点击了取消以后
+          console.log('取消')
+        }
+      }
+    })
+  },
   //退出登录
   btnFbExit(){
-    console.log("点击退出了")
-    wx.removeStorage({
-      key: 'userInfo',
-    })
-    this.setData({
-      condition:false,
-      btn_condition:true,
-    })
+    let userInfo = wx.getStorageSync('userInfo')
+    let _this = this;
+    let fn = () => {
+      this.setData({
+        condition:false,
+        btn_condition:true
+      })
+    }
+    if(!userInfo){
+      wx.showToast({
+        title: '未登录',
+        icon: 'none',
+        duration: 2000
+      })
+    }else{
+        wx.showModal({
+          content: '确定退出吗？',
+          success: function (res) {
+            if (res.confirm) {
+              //这里是点击了确定以后
+              wx.removeStorage({
+                key: 'userInfo',
+              })
+              //点击退出成功
+              wx.showToast({
+                title: '退出成功',
+                icon: 'success',
+                duration: 2000
+              })
+              // fn()
+              _this.setData({
+                condition:false,
+                btn_condition:true
+              })
+            } else {
+              //这里是点击了取消以后
+            }
+          }
+        })
+      }
   },
   /**
    * 生命周期函数--监听页面加载
@@ -70,7 +115,6 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
     let userInfo = wx.getStorageSync("userInfo");
     let condition,btn_condition;
     this.setData({
