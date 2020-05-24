@@ -1,0 +1,46 @@
+<view class="mian">
+
+  <!-- 左边菜单栏开始 -->
+  <view class="variety">
+    <view class="variety-name {{curIndex === index?'on':''}}" 
+    wx:for="{{cateDetail}}"
+    wx:key="index">
+      <view class="name"
+      data-id="{{item.id}}" 
+      data-index="{{index}}"
+      bindtap="getnameId"
+       >{{item.cate}}</view>
+    </view>
+  </view> 
+  <!-- 左边菜单栏结束 -->
+
+  <!-- 右边内容栏开始 -->
+  <scroll-view  scroll-y="true" class="primary" wx:for="{{content}}" wx:key="content">
+    <!-- 这里的图片要跳转到ruits  我用的是navigateTo,所以还要改一下 -->
+    <view class="primary-img" >
+      <image src="{{content.banner}}"></image>
+    </view>
+    <view class="primary-name">
+    {{content.cate}}
+    </view>
+
+    <view class="primary-content">
+      <view class="content-list">
+        <navigator url="/pages/selectgoodsCategory/selectgoodsCategory?id={{item.id}}"
+        class="list-item"
+        wx:for="{{content.detail}}"
+        wx:key="index"
+        >
+          <view class="item-image">
+            <image src="{{item.thumb}}" mode="widthFix"></image>
+          </view>
+          <view class="item-name">
+            {{item.name}}
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </scroll-view>
+  <!-- 右边内容栏结束 -->
+</view>
+

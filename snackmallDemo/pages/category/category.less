@@ -1,0 +1,88 @@
+  .mian {
+    display: flex;
+    .variety {
+        height: 100vh;
+        border-right: 1px solid rgba(128, 128, 128, 0.5);
+        flex: 2;
+      .variety-name {
+        height: 8vh;
+        width: 150rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .name {
+  
+        }
+      }
+    }
+  
+    .primary {
+      flex: 8;
+      height:100vh;
+      .primary-img {
+        width: 600rpx;
+        height: 200rpx;
+        image {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .primary-name {
+        position   : relative;
+        height     : 80rpx;
+        line-height: 80rpx;
+        text-align : center;
+        color      : var(--themeColor);
+      }
+      .primary-name::before{
+        content         : " ";
+            position        : absolute;
+            height          : 4rpx;
+            width           : 80rpx;
+            background-color: var(--themeColor);
+            left            : 150rpx;
+            top             : 40rpx;
+      }
+      .primary-name::after{
+            content         : " ";
+            position        : absolute;
+            height          : 4rpx;
+            width           : 80rpx;
+            background-color: var(--themeColor);
+            right           : 150rpx;
+            top             : 40rpx;
+      }
+      .primary-content {
+        .content-list {
+          display:flex;
+          flex-wrap: wrap;
+          padding:10rpx;
+          .list-item {
+            width:26%;
+            padding:20rpx;
+            display:flex;
+            flex-direction:column;
+            align-items: center;
+            justify-content: center;
+            .item-image {
+              width:100rpx;
+              image {
+                width: 100%;
+              }
+            }
+      
+            .item-name {
+              font-size:20rpx;
+            }
+          }
+        }
+      }
+    }
+  
+  }
+
+  //触发改变样式，（左边）
+  view .variety .variety-name.on {
+    color: #AB956D;
+    border-left: 3px solid #AB956D;
+  }

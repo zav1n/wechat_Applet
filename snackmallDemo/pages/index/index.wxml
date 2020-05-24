@@ -1,0 +1,46 @@
+<view class="swiper">
+  <swiper indicator-dots="true" autoplay="true" interval="2000">
+    <swiper-item wx:for="{{swiper_img}}" wx:key="swiper_img">
+      <image src="{{item.image}}"></image>
+    </swiper-item>
+  </swiper>
+</view>
+
+<view class="choice-theme">
+  <text class="theme-title">精选主题</text>
+  <view class="theme-variety">
+    <view class="variety-tow">
+      <navigator class="variety-ruits" url="/pages/ruits/ruits?home=guowei">
+        <image src="/image/s1.png" mode="heightFix"></image>
+      </navigator>
+      <navigator class="variety-news" url="/pages/ruits/ruits?home=dianxin">
+        <image src="/image/s2.png" mode="heightFix"></image>
+      </navigator>
+    </view>
+
+    <navigator class="variety-food" url="/pages/ruits/ruits?home=chaohuo">
+      <image src="/image/s3.png"></image>
+    </navigator>
+  </view>
+</view>
+
+<view class="recent-news">
+
+  <text class="theme-title">最近新品</text>
+  <view class="news-list">
+    <view class="list-goods" 
+    wx:for="{{newest_json.newest}}" 
+    wx:key="newest" 
+    bindtap="navigateToThegood" 
+    data-item="{{item}}"
+    >
+      <image src="{{item.imageUrl}}"></image>
+      <text>{{item.title+item.count+item.unit}}</text>
+      <text>￥ {{item.price}}</text>
+    </view>
+  </view>
+  
+</view>
+
+
+  

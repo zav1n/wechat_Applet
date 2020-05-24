@@ -1,0 +1,14 @@
+    <view class="snack-newest-list">
+      <navigator 
+      url="/pages/good/good?id={{item.id}}"
+      open-type="navigate"
+      class="snack-newest-list-item" wx:for="{{newest}}" wx:key="index">
+          <view class="imageWrapper">
+            <image src="{{item.imageUrl}}"></image>
+          </view>
+          <view class="desc">
+            <view class="title">{{item.title+" "}}{{item.count}}</view>
+            <view class="price">¥{{item.price}}</view>
+          </view>
+      </navigator>
+    </view>

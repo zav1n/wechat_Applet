@@ -1,0 +1,21 @@
+<view>
+  <view class="nav-top">
+    <image src="{{json.bannerList}}"></image>
+  </view>
+
+  <view class="nav-list">
+    <view class="listgoods">
+      <view class="list-goods" 
+      wx:for="{{json.shopList}}" 
+      wx:key="shopList"
+      bindtap="navigateToThegood" 
+      data-item="{{item}}"
+      >
+        <image src="{{item.imageUrl}}"></image>
+        <text>{{item.title+item.count+item.unit}}</text>
+        <text>￥ {{item.price}}</text>
+      </view>
+    </view>
+  </view>
+
+</view>

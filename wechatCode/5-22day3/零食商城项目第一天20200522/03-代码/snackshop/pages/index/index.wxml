@@ -1,0 +1,30 @@
+<view class="snack">
+  <!-- 首页轮播图开始 -->
+  <view class="snack-swiper">
+    <swiper indicator-dots="true" indicator-color="black" indicator-active-color="white" autoplay="true" circular="true" interval="3000">
+      <swiper-item wx:for="{{swiper_list}}" wx:key="index">
+        <image src="{{item}}" />
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <!-- 首页轮播图结束 -->
+  <!-- 精选主题开始 -->
+  <view class="snack-theme">
+    <view class="snack-theme-title">精选主题</view>
+    <view class="snack-theme-image-list">
+      <navigator url="/pages/theme/theme?id={{item.id}}" open-type="navigate" class="snack-theme-image-list-item" wx:for="{{theme_list}}" wx:key="index">
+        <image src="{{item.image_url}}" mode="widthFix"></image>
+      </navigator>
+    </view>
+  </view>
+
+  <!-- 精选主题结束 -->
+  <!-- 最近新品开始 -->
+  <view class="snack-newest">
+    <view class="snack-newest-title">最近新品</view>
+    <newest-list newest="{{newest}}"/>
+  </view>
+
+  <!-- 最近新品结束 -->
+</view>

@@ -1,0 +1,21 @@
+ .snack-newest-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+ .snack-newest-list .snack-newest-list-item {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+ .snack-newest-list .snack-newest-list-item .imageWrapper {
+  height: 180rpx;
+  width: 180rpx;
+}
+ .snack-newest-list .snack-newest-list-item .desc .title {
+  text-align: center;
+}
+ .snack-newest-list .snack-newest-list-item .desc .price {
+  text-align: center;
+}
