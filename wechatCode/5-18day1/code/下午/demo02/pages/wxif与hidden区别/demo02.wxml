@@ -1,9 +1,0 @@
-<!--pages/demo02/demo02.wxml-->
-<text>wx:if 与 hidden 之间的区别</text>
-<!-- image => img -->
-<image wx:if="{{show}}" src="/images/b1.jpg"></image>
-
-<image hidden="{{show}}" src="/images/b1.jpg"></image>
-
-<image wx:if="{{condition}}" src="/images/b3.jpg"></image>
-<image hidden="{{condition}}" src="/images/b3.jpg"></image>

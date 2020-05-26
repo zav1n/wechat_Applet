@@ -1,0 +1,49 @@
+<view class="my">
+  <view class="my-about">
+  关于我们
+  </view>
+  <!-- 地址管理 开始 -->
+  <navigator url="/pages/address/address" open-type="navigate" class="my-address">
+    地址管理
+  </navigator>
+  <view class="address-info">
+    <view class="userName">{{address.userName}}</view>
+    <view class="telNumber">{{address.telNumber}}</view>
+    <view class="address">{{address.provinceName+address.cityName+address.countyName+address.detailInfo}}</view>
+  </view>
+  <!-- 地址管理 结束 -->
+
+  <!-- 我的订单 开始 -->
+  <view class="my-order">
+    <view class="order-title">
+      我的订单
+    </view>
+    <view class="order-list">
+      <view class="list-item" wx:for="{{carts}}">
+        <view class="item-number">订单号：XXXXXXXX</view>
+        <view class="item-content">
+          <view class="content-left">
+            <view class="left-image">
+              <image src="{{item.data.imageUrl}}" mode="widthFix"></image>
+            </view>
+            <view class="left-desc">
+              <view class="title">{{item.data.title}}</view>
+              <view class="title">{{item.data.count}}{{item.data.unit}}</view>
+            </view>
+          </view>
+          <view class="content-right">
+            待付款
+          </view>
+        </view>
+        <view class="order-bottom">
+          <view class="bottom-left">
+          实付:¥{{item.num * item.data.price}}
+          </view>
+          <view class="bottom-right">付款</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 我的订单 结束 -->
+
+</view>

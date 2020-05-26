@@ -1,0 +1,117 @@
+.snack-my {
+
+
+    .aboutUS {
+        height          : 150rpx;
+        line-height     : 150rpx;
+        text-align      : right;
+        padding         : 20rpx;
+        color           : white;
+        background-color: var(--themeColor);
+    }
+
+    .snack-my-address {
+        position   : relative;
+        height     : 100rpx;
+        line-height: 100rpx;
+        color      : #adadad;
+        text-align : center;
+    }
+
+    .snack-my-address::after {
+        position    : absolute;
+        right       : 50rpx;
+        top         : 42rpx;
+        content     : " ";
+        height      : 16rpx;
+        width       : 16rpx;
+        border-top  : 5rpx solid var(--themeColor);
+        border-right: 5rpx solid var(--themeColor);
+        transform   : rotate(45deg);
+    }
+
+    .address-info {
+        .userName {
+            padding    : 10rpx;
+            height     : 100rpx;
+            line-height: 100rpx;
+            color      : #999999;
+        }
+
+        .telNumber {
+            padding    : 10rpx;
+            height     : 100rpx;
+            line-height: 100rpx;
+            color      : #999999;
+        }
+
+        .address {
+            padding    : 10rpx;
+            height     : 100rpx;
+            line-height: 100rpx;
+            color      : #999999;
+        }
+    }
+
+    .snack-my-order {
+        .title {
+            height     : 100rpx;
+            line-height: 100rpx;
+            color      : #999999;
+            text-align : center;
+        }
+
+        .order-list {
+            .order-list-item {
+                border-bottom:1rpx solid #ddd;
+                .order-number {
+                    height     : 80rpx;
+                    line-height: 80rpx;
+                    color      : #999999;
+                    text-align : left;
+                }
+
+                .order-content {
+                    padding: 10rpx;
+                    display:flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .left {
+                        display:flex;
+                        .image-wrapper {
+                            image {
+                                width: 200rpx;
+                            }
+                        }
+
+                        .desc {
+                            .title {}
+                        }
+                    }
+
+                    .right {
+                        color:#b23031;
+                    }
+                }
+
+                .order-bottom {
+                    padding:10rpx;
+                    display:flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .left {}
+
+                    .right {
+                        height:60rpx;
+                        line-height: 60rpx;
+                        text-align: center;
+                        border-radius:5rpx;
+                        width:160rpx;
+                        color:white;
+                        background-color: #b23031;
+                    }
+                }
+            }
+        }
+    }
+}

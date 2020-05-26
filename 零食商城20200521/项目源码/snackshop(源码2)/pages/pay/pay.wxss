@@ -1,0 +1,64 @@
+.snack-pay .snack-pay-address {
+  position: relative;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #adadad;
+  text-align: center;
+  border-bottom: 1rpx solid #adadad;
+}
+.snack-pay .snack-pay-address .top {
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  text-align: left;
+}
+.snack-pay .snack-pay-address .bottom {
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  text-align: left;
+}
+.snack-pay .snack-pay-address::after {
+  position: absolute;
+  right: 50rpx;
+  top: 42rpx;
+  content: " ";
+  height: 16rpx;
+  width: 16rpx;
+  border-top: 5rpx solid var(--themeColor);
+  border-right: 5rpx solid var(--themeColor);
+  transform: rotate(45deg);
+}
+.snack-pay .snack-pay-list {
+  padding: 10rpx;
+}
+.snack-pay .snack-pay-list .list-item {
+  padding: 10rpx;
+  height: 180rpx;
+  display: flex;
+  border-bottom: 2rpx solid #ddd;
+}
+.snack-pay .snack-pay-list .list-item .left .image-wrapper image {
+  width: 150rpx;
+}
+.snack-pay .snack-pay-bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.snack-pay .snack-pay-bottom .left {
+  padding: 20rpx;
+  color: var(--themeColor);
+}
+.snack-pay .snack-pay-bottom .right {
+  background-color: var(--themeColor);
+  color: white;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  width: 200rpx;
+}

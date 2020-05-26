@@ -26,7 +26,7 @@
 
     <view class="primary-content">
       <view class="content-list">
-        <navigator url="/pages/selectgoodsCategory/selectgoodsCategory?id={{item.id}}"
+        <navigator url="/pages/selectgoods/selectgoods?id={{item.id}}"
         class="list-item"
         wx:for="{{content.detail}}"
         wx:key="index"

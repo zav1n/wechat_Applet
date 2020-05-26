@@ -1,0 +1,92 @@
+.snack-cart {
+    .snack-cart-list {
+        .list-item {
+            height         : 150rpx;
+            display        : flex;
+            width          : 100vw;
+            padding        : 10rpx;
+            align-items    : center;
+            justify-content: space-around;
+            border-bottom  : 1px solid #ddd;
+
+            .left {
+                icon {}
+            }
+
+            .middle {
+                display        : flex;
+                height         : 100%;
+                flex-direction : column;
+                align-items    : center;
+                justify-content: space-between;
+
+                .top {}
+
+                .bottom {
+                    display        : flex;
+                    width          : 100%;
+                    justify-content: space-around;
+
+                    .sub {}
+
+                    .num {}
+
+                    .add {}
+                }
+            }
+
+            .right {
+                display        : flex;
+                flex-direction : column;
+                height         : 100%;
+                justify-content: space-between;
+                align-items    : center;
+
+                .top {}
+
+                .bottom {}
+            }
+        }
+    }
+
+    .snack-cart-bottom {
+        position        : fixed;
+        bottom          : 0;
+        height          : 100rpx;
+        display         : flex;
+        width           : 100vw;
+        background-color: var(--themeColor);
+        justify-content : space-between;
+        align-items     : center;
+
+        .left {
+            display: flex;
+            color  : white;
+
+            icon {
+                margin-left: 20rpx;
+
+            }
+
+            .text {
+                margin-left: 20rpx;
+            }
+        }
+
+        .right {
+            display:flex;
+            color:white;
+            .totalPrice {
+                font-size:40rpx;
+                margin-right:20rpx;
+            }
+
+            .pay {
+                margin-right:20rpx;
+                image {
+                    width: 50rpx;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,126 @@
+.snack-good {
+
+
+    .snack-good-cart {
+        margin  : 20rpx;
+        float   : right;
+        position: relative;
+
+        .icon {
+            height: 80rpx;
+            width : 80rpx;
+
+            image {}
+        }
+
+        .num {
+            height          : 30rpx;
+            line-height     : 30rpx;
+            text-align      : center;
+            border-radius   : 50%;
+            font-size       : 20rpx;
+            width           : 30rpx;
+            color           : white;
+            background-color: var(--themeColor);
+            position        : absolute;
+            top             : 0;
+            left            : 0;
+
+        }
+        .hide{
+            display:none;
+        }
+    }
+
+    .cls {
+        clear: both;
+    }
+
+    .snack-good-detail {
+        .image-wrapper {
+            margin: 0 auto;
+            width : 50vw;
+
+            image {}
+        }
+
+
+        .good-func {
+            display         : flex;
+            align-items     : center;
+            justify-content : space-around;
+            height          : 100rpx;
+            width           : 90%;
+            margin          : 0 auto;
+            background-color: var(--themeColor);
+            border-radius   : 50rpx;
+            color           : white;
+
+            .quantity {
+                flex           : 2;
+                display        : flex;
+                justify-content: center;
+            }
+
+            .add {
+                flex           : 1;
+                display        : flex;
+                justify-content: center;
+            }
+
+            .text {
+                flex           : 2;
+                display        : flex;
+                justify-content: center;
+
+            }
+
+            .image-wrapper {
+                flex           : 1;
+                display        : flex;
+                justify-content: center;
+
+                image {
+                    width: 40rpx;
+                }
+            }
+        }
+
+        .stock {
+            height     : 60rpx;
+            line-height: 60rpx;
+            text-align : center;
+        }
+
+        .title {
+            height     : 100rpx;
+            line-height: 100rpx;
+            text-align : center;
+            font-size  : 50rpx;
+        }
+
+        .price {
+            height     : 100rpx;
+            line-height: 100rpx;
+            text-align : center;
+            font-size  : 50rpx;
+        }
+
+        .snack-good-content {
+            .navs {
+                display: flex;
+
+                .navs-item {
+                    flex:1;
+                    height: 80rpx;
+                    line-height:80rpx;
+                    text-align: center;
+                }
+                .active{
+                    border-bottom: 5rpx solid var(--themeColor);
+                    color:var(--themeColor);
+                }
+            }
+        }
+    }
+}

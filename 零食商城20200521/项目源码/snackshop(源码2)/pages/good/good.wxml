@@ -1,0 +1,76 @@
+<view class="snack-good">
+  <!-- 购物小车图标开始 -->
+  <navigator class="snack-good-cart"
+    url="/pages/cart/cart"
+    open-type="switchTab"
+  >
+    <view class="icon">
+      <image src="/image/cart.png"></image>
+    </view>
+    <view class="num {{num===0?'hide':''}}">{{num}}</view>
+  </navigator>
+  <view class="cls"></view>
+  <!-- 购物小车图标结束 -->
+  <view class="snack-good-detail">
+    <view class="image-wrapper">
+      <image src="{{pageData.imageUrl}}" mode="widthFix"></image>
+    </view>
+    <!-- 购物小车产品功能区开始 -->
+    <view class="good-func">
+      <view class="quantity">
+        数量{{" "+pageData.count*numToCart}}{{" "+pageData.unit}}
+      </view>
+      <view class="add" bindtap="addNum">+</view>
+      <view class="text">加入购物车</view>
+      <view class="image-wrapper" bindtap="handleAddProduct"
+      data-id="{{pageData.id}}"
+      >
+        <image src="/image/cart-o.png" mode="widthFix"></image>
+      </view>
+    </view>
+    <view class="stock">{{pageData.stock}}</view>
+    <view class="title">{{pageData.title}}</view>
+    <view class="price">¥{{pageData.price}}</view>
+    <!-- 购物小车产品功能区结束 -->
+    <!-- 产品的详细内容开始 -->
+    <!-- 非代理的方式开始 -->
+    <!-- <view class="snack-good-content">
+      <view class="navs">
+        <view bindtap="handleTabChange" data-tab="detail" class="navs-item {{activeTab=='detail'?'active':''}}" >商品详情</view>
+        <view bindtap="handleTabChange" data-tab="parameter" class="navs-item {{activeTab=='parameter'?'active':''}}">产品参数</view>
+        <view bindtap="handleTabChange" data-tab="service" class="navs-item {{activeTab=='service'?'active':''}}">售后保障</view>
+      </view>
+      <view class="navs-content">
+          <block wx:if="{{activeTab==='detail'}}">{{pageData.detail}}</block>
+          <block wx:if="{{activeTab==='parameter'}}">{{pageData.parameter}}</block>
+          <block wx:if="{{activeTab==='service'}}">{{pageData.service}}</block>
+      </view>
+    
+    </view> -->
+    <!-- 非代理的方式结束 -->
+    <!-- 代理的方式开始 -->
+
+    <view class="snack-good-content" bindtap="handleContentEvent">
+    <!-- catchtap 阻止小程序往上冒泡
+https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/event.html
+     -->
+      <view class="navs" catchtap="handleNavsEvent">
+      <!-- <view class="navs" bindtap="handleNavsEvent"> -->
+        <view  data-tab="detail" class="navs-item {{activeTab=='detail'?'active':''}}">商品详情</view>
+        <view  data-tab="parameter" class="navs-item {{activeTab=='parameter'?'active':''}}">产品参数</view>
+        <view  data-tab="service" class="navs-item {{activeTab=='service'?'active':''}}">售后保障</view>
+      </view>
+      <view class="navs-content">
+        <block wx:if="{{activeTab==='detail'}}">{{pageData.detail}}</block>
+        <block wx:if="{{activeTab==='parameter'}}">{{pageData.parameter}}</block>
+        <block wx:if="{{activeTab==='service'}}">{{pageData.service}}</block>
+      </view>
+
+    </view>
+    <!-- 代理的方式结束 -->
+    <!-- 产品的详细内容结束 -->
+
+
+  </view>
+
+</view>

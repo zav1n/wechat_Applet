@@ -1,0 +1,54 @@
+<view class="snack-category">
+<!-- 左边菜单栏开始 -->
+<view class="snack-category-left">
+    <view class="menu">
+      <view class="menu-item {{ selectIndex===index?'active':'' }}"
+        wx:for="{{category}}"
+        wx:key="index"
+        bindtap="handleMenuChange"
+        data-index="{{index}}"
+      >
+      {{item.cate}}
+      </view>
+    </view>
+</view>
+<!-- 左边菜单栏结束 -->
+<!-- 右边内容栏开始 -->
+<scroll-view 
+scroll-y="true"
+class="snack-category-right">
+    <!-- 右边顶部的主题图片开始 -->
+    <navigator url="/pages/theme/theme?id=guowei"
+      open-type="navigate"
+      class="image-wrapper"
+    > 
+      <image src="{{rightContent.banner}}" mode="widthFix"/>
+    </navigator>
+    <!-- 右边顶部的主题图片结束 -->
+    <view class="snack-category-title">
+      {{rightContent.cate}}
+    </view>
+    <!-- 产品图片列表开始 -->
+    <view class="snack-category-content">
+      <view class="snack-category-list">
+          <navigator 
+          url="/pages/good/good?id={{item.id}}"
+          open-type="navigate"
+          class="snack-category-list-item"
+            wx:for="{{rightContent.detail}}"
+            wx:key="index"
+          >
+            <view class="image-wrapper">
+                <image src="{{item.thumb}}" mode="widthFix"/>
+            </view>
+            <view class="name">
+              {{item.name}}
+            </view>
+          </navigator>
+      </view>
+    </view>
+    <!-- 产品图片列表结束 -->
+</scroll-view>
+<!-- 右边内容栏结束 -->
+
+</view>

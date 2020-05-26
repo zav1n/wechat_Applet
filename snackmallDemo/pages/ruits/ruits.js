@@ -5,13 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    cateDetail:[],
+    content:[],
   },
   navigateToThegood(e){
     wx.navigateTo({
       url: '/pages/selectgoods/selectgoods',
       events:{
-        fn : itemdata => itemdata (e.currentTarget.dataset.item),
+        fn : pageData => pageData (e.currentTarget.dataset.item),
       }
     })
     console.log(e.currentTarget.dataset.item)
@@ -21,9 +22,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let json = require(`./${options.home}.js`)
+    let cateDetail = require(`./${options.home}.js`)
+    let content = cateDetail[this.data.selectIndex]
     this.setData({
-      json
+      cateDetail,
+      content
     })
   },
 

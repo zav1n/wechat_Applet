@@ -1,0 +1,65 @@
+.pay-address {
+  position: relative;
+  height: 120rpx;
+  line-height: 120rpx;
+  color: #adadad;
+  text-align: center;
+  border-bottom: 1rpx solid #adadad;
+}
+.pay-address .address-top {
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  text-align: left;
+}
+.pay-address .address-bottom {
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  text-align: left;
+}
+.pay-list {
+  padding: 10rpx;
+}
+.pay-list .list-item {
+  padding: 10rpx;
+  height: 180rpx;
+  display: flex;
+  border-bottom: 2rpx solid #ddd;
+}
+.pay-list .list-item .item-left .item-image image {
+  width: 150rpx;
+}
+.pay-bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1rpx solid #ddd;
+}
+.pay-bottom .bottom-left {
+  padding: 20rpx;
+  color: var(--themeColor);
+}
+.pay-bottom .bottom-right {
+  background-color: var(--themeColor);
+  color: white;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  width: 200rpx;
+}
+.pay-address::after {
+  position: absolute;
+  right: 45rpx;
+  top: 45rpx;
+  content: " ";
+  height: 18rpx;
+  width: 18rpx;
+  border-top: 5rpx solid var(--themeColor);
+  border-right: 5rpx solid var(--themeColor);
+  transform: rotate(45deg);
+}

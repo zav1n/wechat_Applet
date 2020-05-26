@@ -1,0 +1,47 @@
+<view class="pay">
+  <!-- 收货地址 开始 -->
+  <navigator url="/pages/address/address" open-type="navigate" class="pay-address">
+    <block wx:if="{{address.userName}}">
+      <view class="address-top">
+        <text>收货人</text>
+        <text>{{address.userName}}</text>
+        <text> , 电话</text>
+        <text>{{address.telNumber}}</text>
+      </view>
+      <view class="address-bottom">
+        <text>{{address.provinceName+address.cityName+address.countyName+address.detailInfo+" , "}}</text>
+        <text>邮编{{address.postalCode}}</text>
+      </view>
+    </block>
+    <block wx:else class="addAddress">
+      添加收货地址
+    </block>
+  </navigator>
+  <!-- 收货地址 结束 -->
+
+  <!-- 商品列表 开始 -->
+  <view class="pay-list">
+    <view class="list-item" 
+    wx:for="{{carts}}" 
+    wx:key="index">
+      <view class="item-left">
+        <view class="item-image">
+          <image src="{{item.data.imageUrl}}" mode="widthFix"></image>
+        </view>
+      </view>
+      <view class="item-right">
+        <view class="title">{{item.data.title}}</view>
+        <view class="price">¥{{item.data.price}}</view>
+        <view class="num">x{{item.num}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 商品列表 结束 -->
+
+  <!-- 商品合计结账 开始 -->
+  <view class="pay-bottom">
+    <view class="bottom-left">付款合计:¥{{totalPrice}}</view>
+    <view class="bottom-right" bindtap="pay">去付款</view>
+  </view>
+  <!-- 商品合计结账 结束 -->
+</view>

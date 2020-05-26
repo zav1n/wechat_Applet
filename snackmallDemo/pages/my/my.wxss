@@ -1,0 +1,94 @@
+.my .my-about {
+  height: 130rpx;
+  line-height: 130rpx;
+  text-align: right;
+  padding: 20rpx;
+  color: white;
+  background-color: var(--themeColor);
+  border-top: 1rpx solid #ddd;
+}
+.my .my-address {
+  position: relative;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #adadad;
+  text-align: center;
+  border-bottom: 1rpx solid rgba(221, 221, 221, 0.8);
+}
+.my .my-address::after {
+  position: absolute;
+  right: 50rpx;
+  top: 30rpx;
+  content: " ";
+  height: 16rpx;
+  width: 16rpx;
+  border-top: 5rpx solid var(--themeColor);
+  border-right: 5rpx solid var(--themeColor);
+  transform: rotate(45deg);
+}
+.my .address-info .userName {
+  padding: 10rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  color: #999999;
+  border-bottom: 1rpx solid rgba(221, 221, 221, 0.8);
+}
+.my .address-info .telNumber {
+  padding: 10rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  color: #999999;
+  border-bottom: 1rpx solid rgba(221, 221, 221, 0.8);
+}
+.my .address-info .address {
+  padding: 10rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  color: #999999;
+  border-bottom: 1rpx solid rgba(221, 221, 221, 0.8);
+}
+.my .my-order .order-title {
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #999999;
+  text-align: center;
+}
+.my .my-order .order-list .list-item {
+  border-bottom: 1rpx solid #ddd;
+}
+.my .my-order .order-list .list-item .item-number {
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #999999;
+  text-align: left;
+}
+.my .my-order .order-list .list-item .item-content {
+  padding: 10rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.my .my-order .order-list .list-item .item-content .content-left {
+  display: flex;
+}
+.my .my-order .order-list .list-item .item-content .content-left .left-image image {
+  width: 200rpx;
+}
+.my .my-order .order-list .list-item .item-content .content-right {
+  color: #b23031;
+}
+.my .my-order .order-list .list-item .order-bottom {
+  padding: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.my .my-order .order-list .list-item .order-bottom .bottom-right {
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  border-radius: 5rpx;
+  width: 160rpx;
+  color: white;
+  background-color: #b23031;
+}

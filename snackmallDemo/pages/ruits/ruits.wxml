@@ -1,12 +1,12 @@
 <view>
   <view class="nav-top">
-    <image src="{{json.bannerList}}"></image>
+    <image src="{{cateDetail.bannerList}}"></image>
   </view>
 
   <view class="nav-list">
     <view class="listgoods">
       <view class="list-goods" 
-      wx:for="{{json.shopList}}" 
+      wx:for="{{cateDetail.shopList}}" 
       wx:key="shopList"
       bindtap="navigateToThegood" 
       data-item="{{item}}"

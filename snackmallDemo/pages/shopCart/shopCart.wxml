@@ -1,0 +1,65 @@
+<view class="shopCart">
+  <!-- 如果购物车是空就显示购物车空的图片 开始 -->
+    <block class="shopCart-empty" wx:if="{{carts.length === 0}}">
+    <image src="/image/empty_cart.jpeg" mode="widthFix"></image>
+  </block>
+  <!-- 如果购物车是空就显示购物车空的图片 结束 -->
+
+  <!-- 购物小车列表 开始 -->
+  <view class="cart-list">
+    <view class="list-item"
+    wx:for="{{carts}}"  wx:key="index"
+    >
+      <view class="item-left" bindtap="handleItemCheck"
+      data-index="{{index}}"
+      >
+        <!-- 点击checkbox 的状态 开始 -->
+        <block wx:if="{{item.checked}}">
+          <icon type="success" color="red"></icon>
+        </block>
+        <block wx:else>
+          <icon type="circle"></icon>
+        </block>
+        <!-- 点击checkbox 的状态 结束 -->
+      </view>
+      <view class="item-middle">
+        <view class="middle-image">
+          <image src="{{item.data.imageUrl}}"></image>
+        </view>
+        <view class="middle-top">
+          {{item.data.title}}{{item.num*item.data.count}}{{item.data.unit}}
+        </view>
+        <view class="middle-bottom">
+          <view class="sub" bindtap="sub" data-index="{{index}}">-</view>
+          <view class="num">{{item.num}}</view>
+          <view class="add" bindtap="add" data-index="{{index}}">+</view>
+        </view>
+      </view>
+      <view class="item-right">
+        <view class="right-top">¥{{item.data.price}}</view>
+        <view class="right-bottom" bindtap="removeItem" data-index="{{index}}">x</view>
+      </view>
+    </view>
+  </view>
+  <!-- 购物小车列表 结束 -->
+
+  <!-- 购物小车底部 开始 -->
+  <view class="shopCart-bottom">
+    <view class="bottom-left">
+      <icon type="success_circle" color="white"
+        bindtap="handleAllCheck"
+      ></icon>
+      <view class="text">全选</view>
+    </view>
+    <view class="bottom-right">
+      <view class="totalPrice">¥{{totalPrice}}</view>
+      <navigator url="/pages/pay/pay" 
+      open-type="navigate"
+      class="pay" wx:if="{{carts.length != 0}}">
+        <image src="/image/icon3.png" mode="widthFix"></image>
+      </navigator>
+    </view>
+  </view>
+  <!-- 购物小车底部 结束 -->
+
+</view>

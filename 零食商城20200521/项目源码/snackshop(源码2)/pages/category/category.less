@@ -1,0 +1,82 @@
+.snack-category {
+    display: flex;
+
+    .snack-category-left {
+        flex            : 2;
+        height          : 100vh;
+        background-color: #ffffff;
+        border-right    : 2rpx solid #ddd;
+
+        .menu {
+            .active {
+                border-left: 2rpx solid var(--themeColor);
+                color      : var(--themeColor);
+            }
+
+            .menu-item {
+                height     : 80rpx;
+                line-height: 80rpx;
+                text-align : center;
+            }
+        }
+    }
+
+    .snack-category-right {
+        flex: 8;
+        height:100vh;
+        .snack-category-title {
+            position   : relative;
+            height     : 80rpx;
+            line-height: 80rpx;
+            text-align : center;
+            color      : var(--themeColor);
+        }
+
+        .snack-category-title::before {
+            content         : " ";
+            position        : absolute;
+            height          : 4rpx;
+            width           : 80rpx;
+            background-color: var(--themeColor);
+            left            : 150rpx;
+            top             : 40rpx;
+        }
+
+        .snack-category-title::after {
+            content         : " ";
+            position        : absolute;
+            height          : 4rpx;
+            width           : 80rpx;
+            background-color: var(--themeColor);
+            right           : 150rpx;
+            top             : 40rpx;
+        }
+
+        .snack-category-content {
+            .snack-category-list {
+                display:flex;
+                flex-wrap: wrap;
+                padding:20rpx;
+                .snack-category-list-item {
+                    width:33.33%;
+                    padding:20rpx;
+                    display:flex;
+                    flex-direction:column;
+                    align-items: center;
+                    justify-content: center;
+                    .image-wrapper {
+                        width:100rpx;
+                        image {
+                           
+                        }
+                    }
+
+                    .name {
+                      font-size:20rpx;
+                    }
+                }
+            }
+        }
+
+    }
+}

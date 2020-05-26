@@ -71,6 +71,26 @@
 					"pathName": "pages/shopCart/shopCart",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "支付页面",
+					"pathName": "pages/pay/pay",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "收货地址",
+					"pathName": "pages/address/address",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "“我的” 页面",
+					"pathName": "pages/my/my",
+					"scene": null
 				}
 			]
 		}

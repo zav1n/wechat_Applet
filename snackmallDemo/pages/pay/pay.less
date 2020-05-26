@@ -1,0 +1,86 @@
+.pay-address {
+    position     : relative;
+    height       : 120rpx;
+    line-height  : 120rpx;
+    color        : #adadad;
+    text-align   : center;
+    border-bottom: 1rpx solid #adadad;
+      .address-top {
+        height     : 60rpx;
+        line-height: 60rpx;
+        font-size  : 30rpx;
+        text-align : left;
+        text {}
+    }
+        .address-bottom {
+        height     : 60rpx;
+        line-height: 60rpx;
+        font-size  : 30rpx;
+        text-align : left;
+        text {}
+        }
+  
+    .addAddress {
+  
+    }
+  }
+    // 商品列表  开始
+    .pay-list {
+        padding: 10rpx;
+        .list-item {
+            padding      : 10rpx;
+            height       : 180rpx;
+            display      : flex;
+            border-bottom: 2rpx solid #ddd;
+            .item-left {
+            .item-image {
+                image {
+                width: 150rpx;
+                }
+            }
+            }
+            .item-right {
+            .title {}
+            .price {}
+            .num {}
+            }
+        }
+    }
+    // 商品列表  结束
+
+    // 商品合计结账 开始
+    .pay-bottom {
+        position: fixed;
+        bottom: 0;
+        width:100vw;
+        height: 100rpx;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1rpx solid #ddd;
+        .bottom-left {
+            padding:20rpx;
+            color:var(--themeColor);
+        }
+      
+        .bottom-right {
+            background-color:var(--themeColor);
+            color:white;
+            height: 100rpx;
+            line-height: 100rpx;
+            text-align: center;
+            width:200rpx;
+        }
+      }
+    // 商品合计结账 结束
+  .pay-address::after{
+    position    : absolute;
+    right       : 45rpx;
+    top         : 45rpx;
+    content     : " ";
+    height      : 18rpx;
+    width       : 18rpx;
+    border-top  : 5rpx solid var(--themeColor);
+    border-right: 5rpx solid var(--themeColor);
+    transform   : rotate(45deg);
+  }

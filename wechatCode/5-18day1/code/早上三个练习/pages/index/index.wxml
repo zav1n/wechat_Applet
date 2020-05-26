@@ -1,9 +1,0 @@
-<!-- 
-  view => div
- -->
- <view class="nav">
-  <view class="nav-item">拉去要求</view>
-  <view class="nav-item">问题</view>
-  <view class="nav-item">市场</view>
-  <view class="nav-item">探索</view>
- </view>

@@ -1,1 +1,74 @@
-/* pages/shopCart/shopCart.wxss */
+.shopCart .cart-list .list-item {
+  height: 150rpx;
+  display: flex;
+  width: 100vw;
+  padding: 10rpx;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid #ddd;
+}
+.shopCart .cart-list .list-item .item-middle {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.shopCart .cart-list .list-item .item-middle .middle-image {
+  position: absolute;
+  left: -120rpx;
+  height: 100rpx;
+  width: 100rpx;
+  top: 25rpx;
+}
+.shopCart .cart-list .list-item .item-middle .middle-image image {
+  width: 100%;
+  height: 100%;
+}
+.shopCart .cart-list .list-item .item-middle .middle-bottom {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.shopCart .cart-list .list-item .item-right {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.shopCart .shopCart-bottom {
+  position: fixed;
+  bottom: 0;
+  height: 100rpx;
+  display: flex;
+  width: 100vw;
+  background-color: var(--themeColor);
+  justify-content: space-between;
+  align-items: center;
+}
+.shopCart .shopCart-bottom .bottom-left {
+  display: flex;
+  color: white;
+}
+.shopCart .shopCart-bottom .bottom-left icon {
+  margin-left: 20rpx;
+}
+.shopCart .shopCart-bottom .bottom-left .text {
+  margin-left: 20rpx;
+}
+.shopCart .shopCart-bottom .bottom-right {
+  display: flex;
+  color: white;
+}
+.shopCart .shopCart-bottom .bottom-right .totalPrice {
+  font-size: 40rpx;
+  margin-right: 20rpx;
+}
+.shopCart .shopCart-bottom .bottom-right .pay {
+  margin-right: 20rpx;
+}
+.shopCart .shopCart-bottom .bottom-right .pay image {
+  width: 50rpx;
+}

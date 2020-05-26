@@ -1,0 +1,96 @@
+.snack-good .snack-good-cart {
+  margin: 20rpx;
+  float: right;
+  position: relative;
+}
+.snack-good .snack-good-cart .icon {
+  height: 80rpx;
+  width: 80rpx;
+}
+.snack-good .snack-good-cart .num {
+  height: 30rpx;
+  line-height: 30rpx;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 20rpx;
+  width: 30rpx;
+  color: white;
+  background-color: var(--themeColor);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.snack-good .snack-good-cart .hide {
+  display: none;
+}
+.snack-good .cls {
+  clear: both;
+}
+.snack-good .snack-good-detail .image-wrapper {
+  margin: 0 auto;
+  width: 50vw;
+}
+.snack-good .snack-good-detail .good-func {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100rpx;
+  width: 90%;
+  margin: 0 auto;
+  background-color: var(--themeColor);
+  border-radius: 50rpx;
+  color: white;
+}
+.snack-good .snack-good-detail .good-func .quantity {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+.snack-good .snack-good-detail .good-func .add {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.snack-good .snack-good-detail .good-func .text {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+.snack-good .snack-good-detail .good-func .image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.snack-good .snack-good-detail .good-func .image-wrapper image {
+  width: 40rpx;
+}
+.snack-good .snack-good-detail .stock {
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+}
+.snack-good .snack-good-detail .title {
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 50rpx;
+}
+.snack-good .snack-good-detail .price {
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 50rpx;
+}
+.snack-good .snack-good-detail .snack-good-content .navs {
+  display: flex;
+}
+.snack-good .snack-good-detail .snack-good-content .navs .navs-item {
+  flex: 1;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+.snack-good .snack-good-detail .snack-good-content .navs .active {
+  border-bottom: 5rpx solid var(--themeColor);
+  color: var(--themeColor);
+}

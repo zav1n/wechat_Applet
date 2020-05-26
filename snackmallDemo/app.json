@@ -1,10 +1,12 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/shopCart/shopCart",
     "pages/category/category",
+    "pages/shopCart/shopCart",
+    "pages/my/my",
+    "pages/address/address",
+    "pages/pay/pay",
     "pages/selectgoods/selectgoods",
-    "pages/selectgoodsCategory/selectgoodsCategory",
     "pages/ruits/ruits",
     "pages/logs/logs"
   ],
@@ -30,7 +32,7 @@
         "selectedIconPath": "/image/cart-o.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/my/my",
         "text": "我的",
         "iconPath": "/image/my.png",
         "selectedIconPath": "/image/my-o.png"

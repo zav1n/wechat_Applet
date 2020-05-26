@@ -2,7 +2,7 @@
   <view class="goods-img">
     <image src="{{itemdata.imageUrl}}"></image>
     <navigator class="goods-car" 
-    url="/pages/"
+    url="/pages/shopCart/shopCart"
     open-type="switchTab"
     >
       <image src="/image/cart.png"></image>
@@ -23,7 +23,7 @@
         <text>{{itemdata.count + itemdata.unit}}</text>
       </view>
       <view class="right" bindtap="handleAddProduct"
-      data-id="{{pageData.id}}">
+      data-id="{{itemdata.id}}">
         <text>加入购物车</text>
         <image src="/image/cart-o.png"></image>
       </view>
